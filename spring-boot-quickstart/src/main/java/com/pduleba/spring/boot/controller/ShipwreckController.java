@@ -13,7 +13,7 @@ import com.pduleba.spring.boot.model.Shipwreck;
 @RequestMapping(path = "/api/v1")
 public class ShipwreckController {
 
-	@RequestMapping(path = "/shipwreck", method = GET, produces = APPLICATION_JSON_VALUE)
+	@RequestMapping(path = "/shipwrecks", method = GET, produces = APPLICATION_JSON_VALUE)
 	public List<Shipwreck> list() {
 		return ShipwreckStub.list();
 	}
