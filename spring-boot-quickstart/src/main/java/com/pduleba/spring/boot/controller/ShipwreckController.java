@@ -16,8 +16,13 @@ import com.pduleba.spring.boot.repository.ShipwreckRepository;
 @RequestMapping(path = "/api/v1")
 public class ShipwreckController {
 
-	@Autowired
 	private ShipwreckRepository shipwreckRepository;
+
+	@Autowired
+	public ShipwreckController(ShipwreckRepository shipwreckRepository) {
+		super();
+		this.shipwreckRepository = shipwreckRepository;
+	}
 
 	@RequestMapping(path = "/shipwrecks", method = GET, produces = APPLICATION_JSON_VALUE)
 	public List<Shipwreck> list() {
