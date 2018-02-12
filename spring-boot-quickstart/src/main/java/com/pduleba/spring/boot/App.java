@@ -9,7 +9,7 @@ public class App {
 	private static final String SPRING_PROFILES_ACTIVE = "spring.profiles.active";
 
 	public static void main(String[] args) {
-		System.setProperty(SPRING_PROFILES_ACTIVE, "h2");
+		System.setProperty(SPRING_PROFILES_ACTIVE, "prod");
 		SpringApplication.run(App.class, args);
 	}
 
