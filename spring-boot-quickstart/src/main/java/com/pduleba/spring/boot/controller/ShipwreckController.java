@@ -36,12 +36,7 @@ public class ShipwreckController {
 
 	@RequestMapping(path = "/shipwrecks/{id}", method = GET, produces = APPLICATION_JSON_VALUE)
 	public Shipwreck read(@PathVariable(value = "id") Long id) {
-		Shipwreck found = shipwreckRepository.findOne(id);
-		if (found == null) {
-			throw new RuntimeException();
-		} else {
-			return found;
-		}
+		return shipwreckRepository.findOne(id);
 	}
 
 	@RequestMapping(path = "/shipwrecks/{id}", method = PUT, produces = APPLICATION_JSON_VALUE)
